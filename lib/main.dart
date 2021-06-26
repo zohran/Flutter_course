@@ -25,7 +25,7 @@ class Zohran extends StatelessWidget {
         fontFamily: GoogleFonts.lato().fontFamily,
         primaryTextTheme: GoogleFonts.latoTextTheme(),
       ),
-      initialRoute: MyRouts.loginrout,
+      initialRoute: MyRouts.homerout,
       routes: {
         //"/": (context) => Homepage(),
         MyRouts.homerout: (context) => Homepage(),
