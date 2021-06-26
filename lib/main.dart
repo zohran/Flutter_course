@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Screens/Login.dart';
 import 'package:flutter_application_1/Screens/home_page.dart';
 import 'package:flutter_application_1/utils/routs.dart';
+import 'package:flutter_application_1/utils/themes.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main(List<String> args) {
@@ -17,14 +18,8 @@ class Zohran extends StatelessWidget {
       //home: Homepage(),
       debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.light,
-      theme: ThemeData(
-        primarySwatch: Colors.red,
-      ),
-      darkTheme: ThemeData(
-        brightness: Brightness.dark,
-        fontFamily: GoogleFonts.lato().fontFamily,
-        primaryTextTheme: GoogleFonts.latoTextTheme(),
-      ),
+      theme: MyTheme().lightTheme(context),
+      darkTheme: MyTheme().darkTheme(context),
       initialRoute: MyRouts.homerout,
       routes: {
         //"/": (context) => Homepage(),

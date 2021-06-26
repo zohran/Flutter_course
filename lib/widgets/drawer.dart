@@ -32,6 +32,9 @@ class MyDrawer extends StatelessWidget {
             ),
           ),
           ListTile(
+            onTap: () {
+              print("Laggan");
+            },
             leading: Icon(
               CupertinoIcons.mail,
               color: Colors.black,
