@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/models/catalog.dart';
+import 'package:flutter_application_1/widgets/ItemWidget.dart';
 import 'package:flutter_application_1/widgets/drawer.dart';
 
 class Homepage extends StatelessWidget {
@@ -6,15 +8,21 @@ class Homepage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    int days = 30;
+    final MeriList = List.generate(20, (index) => CatalogModel.items[0]);
     return Container(
       child: Scaffold(
         appBar: AppBar(
           title: Text("Catalog App"),
         ),
-        body: Center(
-          child: Container(
-            child: Text("Zeer $days"),
+        body: Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: ListView.builder(
+            itemCount: MeriList.length,
+            itemBuilder: (context, index) {
+              return ItemWidget(
+                item: MeriList[index],
+              );
+            },
           ),
         ),
         drawer: MyDrawer(),

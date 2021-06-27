@@ -3,7 +3,6 @@ import 'package:flutter_application_1/Screens/Login.dart';
 import 'package:flutter_application_1/Screens/home_page.dart';
 import 'package:flutter_application_1/utils/routs.dart';
 import 'package:flutter_application_1/utils/themes.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 void main(List<String> args) {
   runApp(Zohran());
